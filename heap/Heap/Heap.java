@@ -5,7 +5,7 @@ public class Heap {
 	public static void main(String[] args) {
 		
 		int[] tree = {4,3,8,9,10,2};
-		buildHeap(tree, tree.length);
+		//buildHeap(tree, tree.length);
 		heapifySort(tree, tree.length);
 		for(int m : tree) {
 			System.out.println(m);
@@ -14,28 +14,16 @@ public class Heap {
 		
 	}
 	
-	
+	//≈≈–Ú
 	public static void heapifySort(int[] tree,int n) {
 		buildHeap(tree,n);
-		for(int i = n;i<n;i--) {
+		for(int i = n-1;i>0;i--) {
 			swap(tree,i,0);
-			heapify(tree,i,(i-1)/2);
+			heapify(tree,i,0);
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	//∂—ªØ
 	public static void heapify(int[] tree,int n,int i) {
 		if(i >= n) {
 			return ;
@@ -54,6 +42,7 @@ public class Heap {
 			heapify(tree,n,max);
 		}
 	}
+	//Ω®∂—
 	static void  buildHeap(int tree[],int n) {
 		int lastNode =  n-1 ;
 		int parent = (lastNode-1)/2;
